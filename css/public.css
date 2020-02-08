@@ -183,3 +183,39 @@ h3.menu-item-title {
     width: 100%;
   }
 }
+/****** SignUp comes here ******/
+input {
+  font-size: 20px;
+  margin-bottom: 8px;
+  background-color: #ffeb00;
+  color: #000;
+  opacity: .8;
+}
+legend {
+  color: #fff;
+}
+button {
+  color: #000;
+  background-color: #ffeb00;
+}
+button:disabled {
+  color: #fff;
+  background-color: #ffeb00;
+}
+
+.myinfo-photo {
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+  padding: 0;
+  left: 0;
+  width: 100%;
+  margin-right: -15px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  max-width: 250px;
+}
+
+#signup {
+  color: #9bbad6;
+}

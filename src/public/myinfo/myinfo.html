@@ -1,1 +1,21 @@
-<h1>MyinfoX</h1>
+  <div ng-controller="MyinfoController as myinfo">
+    <legend>My Info</legend>
+    <!-- myinfo.user is {{ myinfo.user }}. -->
+    <div id="noinfo" ng-if="!myinfo.user">
+    	Not Signed Up Yet. <a ui-sref="public.signup"><span id="signup">Sign up Now!</span></a>
+    </div>
+    <div id="info" ng-if="myinfo.user">
+      Username: {{ myinfo.user.firstname}} {{ myinfo.user.lastname}} <br>
+      Email: {{ myinfo.user.email}} <br>
+      Phone:    {{ myinfo.user.phone }} <br>
+      Menu short_name: {{ myinfo.user.short_name  }} <br>
+      Menu name: {{myinfo.user.menu.name}} <br>
+      Menu Description: {{myinfo.user.menu.description}} <br>
+
+      <div class="myinfo-photo">
+        <div>{{myinfo.user.fovoritemenu}}</div>
+        <img class="img-responsive"  ng-src="{{myinfo.basePath}}/images/{{myinfo.user.short_name}}.jpg" alt="{{myinfo.user.menu.name}}">
+      </div>
+     </div>
+  </div>
+
